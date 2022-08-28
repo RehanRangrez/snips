@@ -4,8 +4,6 @@ $gray: #242424;
 $yellow: #ffc23c;
 $tertiary: #8d99ae;
 
-
-
 $sans: "Open Sans", sans-serif;
 $raleway: "Raleway", sans-serif;
 
@@ -154,28 +152,28 @@ body {
         }
       }
     }
-    .article-content{
-        font-family: $sans;
-        color: $white;
-        font-size: 18px;
-        padding: 10px ;
-        p{
-            margin: 16px;
-            line-height: 2.5;
-            // font-size: ;
-        }
-        .code{
-            width: 90%;
-            margin: 10px auto;
-            background-color: $gray;
-            border: 1px solid $white;
-            height: 200px;
-            padding: 15px 10px;
-            border-radius: 15px;
-            font-family: $raleway;
-            font-size: 16px;
-            line-height: 1.2;
-        }
+    .article-content {
+      font-family: $sans;
+      color: $white;
+      font-size: 18px;
+      padding: 10px;
+      p {
+        margin: 16px;
+        line-height: 2.5;
+        // font-size: ;
+      }
+      .code {
+        width: 90%;
+        margin: 10px auto;
+        background-color: $gray;
+        border: 1px solid $white;
+        height: 200px;
+        padding: 15px 10px;
+        border-radius: 15px;
+        font-family: $raleway;
+        font-size: 16px;
+        line-height: 1.2;
+      }
     }
   }
 }
