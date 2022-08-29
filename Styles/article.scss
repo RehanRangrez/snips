@@ -34,6 +34,9 @@ body {
     justify-content: space-between;
     padding: 50px 50px;
     border-bottom: 1px solid $yellow;
+    a {
+      display: block;
+    }
     .search-box-container {
       width: 400px;
       position: relative;
@@ -110,7 +113,7 @@ body {
     width: 900px;
     min-height: 600px;
     border: 2px solid $yellow;
-    margin: 10px 50px;
+    margin: 10px auto;
     .article-head {
       display: grid;
       grid-auto-columns: 1fr;
@@ -120,7 +123,7 @@ body {
       justify-content: center;
       align-items: center;
       background-color: $gray;
-      padding: 25px 20px 10px 20px;
+      padding: 25px 20px 15px 20px;
       .icon-container {
         width: 50px;
         height: 50px;
@@ -155,10 +158,10 @@ body {
     .article-content {
       font-family: $sans;
       color: $white;
-      font-size: 18px;
       padding: 10px;
       p {
         margin: 16px;
+        font-size: 18px;
         line-height: 2.5;
         // font-size: ;
       }
@@ -173,6 +176,242 @@ body {
         font-family: $raleway;
         font-size: 16px;
         line-height: 1.2;
+      }
+    }
+  }
+
+  .recommendations {
+    width: 100%;
+    margin: 60px auto 30px auto;
+    text-align: center;
+    h2 {
+      font-family: $raleway;
+      color: $white;
+      font-weight: 500;
+    }
+  }
+
+  .article-snippets-container {
+    width: 100%;
+    // padding: 5px 0;
+    .snippet {
+      padding: 15px;
+      width: 800px;
+      height: 150px;
+      margin: 30px auto;
+      cursor: pointer;
+      position: relative;
+      list-style-type: none;
+      border: 2px solid;
+      border-image-slice: 1;
+      border-width: 2px;
+      border-image-source: linear-gradient(160deg, $yellow, $white);
+      // border-image-source: linear-gradient(160deg, $gray, $white);
+      transition: 0.4s all ease-in-out;
+      border-radius: 15px;
+      .snippet-header {
+        width: 100%;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 0.2fr 3.2fr;
+        gap: 0px 10px;
+        //   background-color: red;
+        justify-content: center;
+        align-items: center;
+        .icon-container {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          // background-color: pink;
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .snippet-title-tag {
+          align-items: flex-start;
+          a {
+            text-decoration: none;
+            color: $white;
+            h2 {
+              font-family: $raleway;
+              font-weight: 500;
+              text-align: start;
+            }
+          }
+          .tags-container {
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .tag {
+              font-family: $raleway;
+              font-size: 10px;
+              margin-right: 10px;
+              cursor: text;
+              color: $gray;
+              background-color: white;
+              padding: 5px 8px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+      .snippet-description {
+        margin-top: 20px;
+        padding-left: 10px;
+
+        p {
+          font-family: $sans;
+          font-size: 18px;
+          color: $white;
+          font-weight: 300;
+        }
+      }
+      .author {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        p {
+          font-family: $sans;
+          font-weight: 300;
+          font-size: 12px;
+          color: $yellow;
+        }
+      }
+
+      &:hover {
+        border-image-source: linear-gradient(200deg, $gray, $white);
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0 30px 0;
+    border: 1px solid $gray;
+    p {
+      color: $white;
+      font-family: $raleway;
+      font-weight: 600;
+      margin: 10px 0;
+      letter-spacing: 0.2px;
+      a {
+        color: $yellow;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  // Styles for viewports narrower than 768 pixels.
+
+  body {
+    header {
+      padding: 50px 20px;
+    }
+    article {
+      width: 700px;
+    }
+    .article-snippets-container .snippet {
+      width: 700px;
+      padding: 10px 5px;
+      .snippet-description {
+        font-size: 16px;
+      }
+      .author {
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  // Styles for viewports narrower than 425 pixels.
+  body {
+    header {
+      padding: 50px 20px;
+
+      a {
+        margin: 0 auto;
+        width: 100px;
+        img {
+          width: 100%;
+        }
+      }
+      .search-box-container {
+        width: 250px;
+        height: 50px;
+        display: none;
+      }
+    }
+
+    .breadcrumb-container {
+      .breadcrumbs {
+        padding: 5px;
+        li {
+          margin: 15px 0;
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    article {
+      width: 390px;
+      .article-head {
+        padding: 20px 10px 10px 15px;
+        .title-author-container {
+          .article-title {
+            font-size: 20px;
+          }
+          .article-author {
+            font-size: 14px;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .article-content {
+        p {
+          font-size: 16px;
+          line-height: 32px;
+          margin: 10px;
+        }
+        .code{
+          margin: 15px auto;
+        }
+      }
+    }
+
+    .article-snippets-container .snippet {
+      width: 350px;
+      min-height: 250px;
+      padding: 10px 10px;
+      .snippet-description {
+        font-size: 16px;
+      }
+      .author {
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+    footer {
+      p {
+        font-size: 14px;
       }
     }
   }
