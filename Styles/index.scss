@@ -236,7 +236,6 @@ body {
         width: 800px;
         height: 150px;
         margin: 30px auto;
-        cursor: pointer;
         position: relative;
         list-style-type: none;
         border: 2px solid;
@@ -250,7 +249,7 @@ body {
           width: 100%;
           display: grid;
           grid-auto-columns: 1fr;
-          grid-template-columns: 0.2fr 3.2fr;
+          grid-template-columns: 0.2fr 3.2fr 0.2fr;
           gap: 0px 10px;
           //   background-color: red;
           justify-content: center;
@@ -265,6 +264,17 @@ body {
             img {
               width: 40px;
               height: 40px;
+            }
+          }
+          .share-icon-container{
+            width: 30px;
+            cursor: pointer;
+            img{
+              width: 100%;
+              opacity: 0.5;
+              &:hover{
+                opacity: 0.9;
+              }
             }
           }
           .snippet-title-tag {
@@ -478,6 +488,12 @@ body {
         width: 350px;
         min-height: 250px;
         padding: 10px 10px;
+        .snippet-header{
+          grid-template-columns: 0.2fr 3.2fr;
+          .share-icon-container{
+            display: none;
+          }
+        }
         .snippet-description {
           font-size: 16px;
         }

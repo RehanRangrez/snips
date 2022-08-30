@@ -128,7 +128,6 @@ body article .article-head {
   grid-template-columns: 0.2fr 3.6fr 0.6fr;
   gap: 0px 15px;
   justify-content: center;
-  align-items: center;
   background-color: #242424;
   padding: 25px 20px 15px 20px;
 }
@@ -214,7 +213,7 @@ body .article-snippets-container .snippet .snippet-header {
   width: 100%;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 0.2fr 3.2fr;
+  grid-template-columns: 0.2fr 3.2fr 0.2fr;
   gap: 0px 10px;
   justify-content: center;
   align-items: center;
@@ -229,6 +228,19 @@ body .article-snippets-container .snippet .snippet-header .icon-container {
 body .article-snippets-container .snippet .snippet-header .icon-container img {
   width: 40px;
   height: 40px;
+}
+body .article-snippets-container .snippet .snippet-header .share-icon-container {
+  width: 30px;
+  justify-content: end;
+  cursor: pointer;
+}
+body .article-snippets-container .snippet .snippet-header .share-icon-container img {
+  margin-left: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+body .article-snippets-container .snippet .snippet-header .share-icon-container img:hover {
+  opacity: 0.9;
 }
 body .article-snippets-container .snippet .snippet-header .snippet-title-tag {
   align-items: flex-start;
@@ -348,7 +360,7 @@ body footer p a:hover, body footer p a:focus {
     font-size: 12px;
   }
   body article {
-    width: 390px;
+    width: 365px;
   }
   body article .article-head {
     padding: 20px 10px 10px 15px;
@@ -362,6 +374,14 @@ body footer p a:hover, body footer p a:focus {
   body article .article-head .title-author-container .article-author span {
     font-size: 14px;
   }
+  body article .article-head .share-icon-container {
+    position: relative;
+  }
+  body article .article-head .share-icon-container img {
+    position: absolute;
+    transform: translateY(-20%);
+    width: 30px;
+  }
   body article .article-content p {
     font-size: 16px;
     line-height: 32px;
@@ -374,6 +394,12 @@ body footer p a:hover, body footer p a:focus {
     width: 350px;
     min-height: 250px;
     padding: 10px 10px;
+  }
+  body .article-snippets-container .snippet .snippet-header {
+    grid-template-columns: 0.2fr 3.2fr;
+  }
+  body .article-snippets-container .snippet .snippet-header .share-icon-container {
+    display: none;
   }
   body .article-snippets-container .snippet .snippet-description {
     font-size: 16px;

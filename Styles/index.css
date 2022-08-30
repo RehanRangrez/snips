@@ -215,7 +215,6 @@ body .content .snippets-container .snippet {
   width: 800px;
   height: 150px;
   margin: 30px auto;
-  cursor: pointer;
   position: relative;
   list-style-type: none;
   border: 2px solid;
@@ -229,7 +228,7 @@ body .content .snippets-container .snippet .snippet-header {
   width: 100%;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 0.2fr 3.2fr;
+  grid-template-columns: 0.2fr 3.2fr 0.2fr;
   gap: 0px 10px;
   justify-content: center;
   align-items: center;
@@ -244,6 +243,17 @@ body .content .snippets-container .snippet .snippet-header .icon-container {
 body .content .snippets-container .snippet .snippet-header .icon-container img {
   width: 40px;
   height: 40px;
+}
+body .content .snippets-container .snippet .snippet-header .share-icon-container {
+  width: 30px;
+  cursor: pointer;
+}
+body .content .snippets-container .snippet .snippet-header .share-icon-container img {
+  width: 100%;
+  opacity: 0.5;
+}
+body .content .snippets-container .snippet .snippet-header .share-icon-container img:hover {
+  opacity: 0.9;
 }
 body .content .snippets-container .snippet .snippet-header .snippet-title-tag {
   align-items: flex-start;
@@ -434,6 +444,12 @@ body footer p a:hover, body footer p a:focus {
     width: 350px;
     min-height: 250px;
     padding: 10px 10px;
+  }
+  body .content .snippets-container .snippet .snippet-header {
+    grid-template-columns: 0.2fr 3.2fr;
+  }
+  body .content .snippets-container .snippet .snippet-header .share-icon-container {
+    display: none;
   }
   body .content .snippets-container .snippet .snippet-description {
     font-size: 16px;
