@@ -1,7 +1,22 @@
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffc23c;
+  border-radius: 10px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *:focus {
@@ -10,6 +25,7 @@
 
 html {
   height: -webkit-fill-available;
+  scroll-behavior: smooth;
 }
 
 body {
